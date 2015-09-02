@@ -24,6 +24,7 @@ namespace MultiSafepay
         {
             _client = new WebClient();
             _client.Headers["api_key"] = apiKey;
+            _client.Encoding = System.Text.Encoding.UTF8;
 
             _urlProvider = new UrlProvider(apiUrl, languageCode);
         }
